@@ -17,13 +17,13 @@
 % OBJ is the device object.
 % End of function definition - DO NOT EDIT
 
-% Copyright © 2020 Pico Technology Ltd.  All rights reserved.
+% Copyright © 2024 Pico Technology Ltd.  All rights reserved.
 % You may copy and distribute this file as long as it remains unmodified.
 % SB
 
     fprintf('PicoScope 3000E Series (A API) MATLAB Instrument Driver');
     fprintf('\n');
-    fprintf('\nCopyright © 2020 Pico Technology Ltd.  All rights reserved. \n')
+    fprintf('\nCopyright © 2024 Pico Technology Ltd.  All rights reserved. \n')
     fprintf('\n');
     
     % Load libraries
@@ -68,7 +68,7 @@
 % OBJ is the device object.
 % End of function definition - DO NOT EDIT
 
-% Copyright © 2020 Pico Technology Ltd. All rights reserved.
+% Copyright © 2024 Pico Technology Ltd. All rights reserved.
 % You may copy and distribute this file as long as it remains unmodified.
 % SB
 
@@ -888,13 +888,12 @@
                <CapabilityGroup>Base</CapabilityGroup>
                <Type>MCode</Type>
                <Code>
-                  <MCode>function status = psospaNearestSampleIntervalStateless(obj,enabledChannelFlags,timeIntervalRequested,resolution,...
-    timebase,timeIntervalAvailable)
+                  <MCode>function status = psospaNearestSampleIntervalStateless(obj,enabledChannelFlags,timeIntervalRequested,roundFaster,resolution,timebase,timeIntervalAvailable)
 % For group functions, OBJ is the group object. For
 % base device functions, OBJ is the device object.
 
     status = calllib('psospa','psospaNearestSampleIntervalStateless',obj.DriverData.unitHandle,enabledChannelFlags,...
-        timeIntervalRequested,resolution,timebase,timeIntervalAvailable);
+        timeIntervalRequested,roundFaster,resolution,timebase,timeIntervalAvailable);
     
     if (status == PicoStatus.PICO_OK)
         
